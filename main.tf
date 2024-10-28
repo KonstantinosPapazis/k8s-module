@@ -342,7 +342,7 @@ resource "aws_security_group_rule" "cluster" {
 
 locals {
   # Not available on outposts
-  create_oidc_provider = local.create && var.enable_irsa && !local.create_outposts_local_cluster
+  create_oidc_provider = local.create && var.enable_irsa
 
   oidc_root_ca_thumbprint = local.create_oidc_provider && var.include_oidc_root_ca_thumbprint ? [data.tls_certificate.this[0].certificates[0].sha1_fingerprint] : []
 }
