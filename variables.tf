@@ -401,7 +401,7 @@ variable "enable_efa_support" {
 variable "enable_irsa" {
   description = "Determines whether to create an OpenID Connect Provider for EKS to enable IRSA"
   type        = bool
-  default     = false #Default True
+  default     = true
 }
 
 variable "openid_connect_audiences" {
