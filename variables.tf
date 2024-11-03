@@ -171,7 +171,7 @@ variable "enable_cluster_creator_admin_permissions" {
 variable "create_kms_key" {
   description = "Controls if a KMS key for cluster encryption should be created"
   type        = bool
-  default     = false #Default True
+  default     = true
 }
 
 variable "kms_key_description" {
