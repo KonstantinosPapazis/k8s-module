@@ -171,7 +171,7 @@ variable "enable_cluster_creator_admin_permissions" {
 variable "create_kms_key" {
   description = "Controls if a KMS key for cluster encryption should be created"
   type        = bool
-  default     = true
+  default     = false #Default True
 }
 
 variable "kms_key_description" {
@@ -401,7 +401,7 @@ variable "enable_efa_support" {
 variable "enable_irsa" {
   description = "Determines whether to create an OpenID Connect Provider for EKS to enable IRSA"
   type        = bool
-  default     = true
+  default     = false #Default True
 }
 
 variable "openid_connect_audiences" {
@@ -447,7 +447,7 @@ variable "iam_role_name" {
 variable "iam_role_use_name_prefix" {
   description = "Determines whether the IAM role name (`iam_role_name`) is used as a prefix"
   type        = bool
-  default     = true
+  default     = false #default True
 }
 
 variable "iam_role_path" {
@@ -483,7 +483,7 @@ variable "iam_role_tags" {
 variable "cluster_encryption_policy_use_name_prefix" {
   description = "Determines whether cluster encryption policy name (`cluster_encryption_policy_name`) is used as a prefix"
   type        = bool
-  default     = true
+  default     = false #Default True
 }
 
 variable "cluster_encryption_policy_name" {

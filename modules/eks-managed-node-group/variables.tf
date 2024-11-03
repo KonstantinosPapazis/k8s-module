@@ -491,7 +491,7 @@ variable "iam_role_name" {
 variable "iam_role_use_name_prefix" {
   description = "Determines whether the IAM role name (`iam_role_name`) is used as a prefix"
   type        = bool
-  default     = true
+  default     = false #Default True
 }
 
 variable "iam_role_path" {
